@@ -1,8 +1,9 @@
-def calculate_perimeter(length, width):
+# Read the Celsius temperature from standard input
+# Remember to convert the input string to a number (float)
+celsius_str = float(input())# Convert Celsius to Fahrenheit using the formula: F = C * 9/5 + 32
+# Store the result in a variable called 'fahrenheit'
+fahrenheit = celsius_str * 9/5 + 32
+  # Placeholder, replace with actual calculation
 
-    # TODO: store 2 * (length + width) in a variable called perimeter
-  # TODO: replace 0 with the correct calculation
-    perimeter = 2 * (length + width)
-    return perimeter
-my_rectangle = calculate_perimeter(10,10)
-print(my_rectangle)
+# Print the Fahrenheit temperature, formatted to one decimal place
+print(f"{fahrenheit:.1f}")
