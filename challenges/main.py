@@ -1,9 +1,16 @@
-# Read the Celsius temperature from standard input
-# Remember to convert the input string to a number (float)
-celsius_str = float(input())# Convert Celsius to Fahrenheit using the formula: F = C * 9/5 + 32
-# Store the result in a variable called 'fahrenheit'
-fahrenheit = celsius_str * 9/5 + 32
-  # Placeholder, replace with actual calculation
+def make_change(amount_owed_cents, amount_paid_cents):
+    if amount_paid_cents < amount_owed_cents:
+        raise ValueError("Insufficient payment")
+    change = amount_owed_cents - amount_paid_cents
 
-# Print the Fahrenheit temperature, formatted to one decimal place
-print(f"{fahrenheit:.1f}")
+    #initialize dictionary with all 4 coins
+    denomination = [25, 10, 5, 1]
+    result = {25: 1, 10: 0, 5: 1, 1: 2}
+
+    for coin in denomination:
+        if change >= coin:
+            count = change // coin #how many of this coin
+            result[coin] = countchange = change % coin #remaining coin
+    return result
+
+    # Your code here
