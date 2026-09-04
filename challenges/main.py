@@ -1,11 +1,11 @@
-# No starter code provided — write the full function yourself.
-# Function name: split_bill
-# Parameters: bill_amount, tip_percent, people
-# Must return: each person's share, rounded to 2 decimal places
+def remove_duplicates(items):
+    new_list = []
+    for item in items:
+        if item not in new_list:
+            new_list.append(item)
 
-def split_bill(bill_amount, tip_percent, people):
-    tip_amount = bill_amount * (tip_percent/100)
-    grand_total = bill_amount + tip_amount
-    persons_share = grand_total/people
-    return round(persons_share, 2)
-print(split_bill(100, 10, 2))
+    return new_list 
+
+print(remove_duplicates([1,2,2,3,1]))
+
+    # TODO: use a loop to build a new list with duplicates removed, keeping first occurrences
