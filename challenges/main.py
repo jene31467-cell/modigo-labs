@@ -1,6 +1,9 @@
-def find_phone_number(contacts, name):
-    return dict(contacts).get(name, 'Not found')
-
-    # TODO: build a dict from `contacts` (list of (name, phone) tuples),
-    # then return the phone number for `name`, or "Not found"
-print(find_phone_number([('Ada', '0801'), ('Bola', '0802')], 'Ada'))
+def build_roster(students):
+    roster = {}
+    # TODO: loop through `students` and group names by grade in `roster`
+    for name, grade in students:
+        if grade not in roster:
+            roster[grade] = []
+        roster[grade].append(name)
+    return roster
+print(build_roster([('Ada', 5), ('Bola', 6), ('Chidi', 5)]))
